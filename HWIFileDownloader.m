@@ -1278,7 +1278,7 @@ didReceiveChallenge:(NSURLAuthenticationChallenge *)aChallenge
     NSURL *aDocumentsDirectoryURL = [aDocumentDirectoryURLsArray firstObject];
     if (aDocumentsDirectoryURL)
     {
-        aFileDownloadDirectoryURL = [aDocumentsDirectoryURL URLByAppendingPathComponent:@"file-download" isDirectory:YES];
+        aFileDownloadDirectoryURL = [aDocumentsDirectoryURL URLByAppendingPathComponent:@"" isDirectory:YES];
         if ([[NSFileManager defaultManager] fileExistsAtPath:aFileDownloadDirectoryURL.path] == NO)
         {
             BOOL aCreateDirectorySuccess = [[NSFileManager defaultManager] createDirectoryAtPath:aFileDownloadDirectoryURL.path withIntermediateDirectories:YES attributes:nil error:&anError];
