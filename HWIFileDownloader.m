@@ -636,7 +636,7 @@
 - (nonnull NSURL *)tempLocalFileURLForDownloadFromURL:(nonnull NSURL *)aRemoteURL
 {
     NSString *anOfflineDownloadDirectory = NSTemporaryDirectory();
-    anOfflineDownloadDirectory = [anOfflineDownloadDirectory stringByAppendingPathComponent:@"file-download"];
+    anOfflineDownloadDirectory = [anOfflineDownloadDirectory stringByAppendingPathComponent:@""];
     if ([[NSFileManager defaultManager] fileExistsAtPath:anOfflineDownloadDirectory] == NO)
     {
         [[NSFileManager defaultManager] createDirectoryAtPath:anOfflineDownloadDirectory withIntermediateDirectories:YES attributes:nil error:NULL];
